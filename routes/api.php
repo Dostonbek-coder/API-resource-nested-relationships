@@ -13,3 +13,4 @@ Route::get('/user', function (Request $request) {
 Route::apiResource('users',UserController::class);
 Route::apiResource('posts',PostController::class);
 Route::get('/books', [BookController::class, 'index']);
+
