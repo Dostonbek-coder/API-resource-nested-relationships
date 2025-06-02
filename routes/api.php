@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 
 Route::get('/user', function (Request $request) {
@@ -11,3 +12,4 @@ Route::get('/user', function (Request $request) {
 
 Route::apiResource('users',UserController::class);
 Route::apiResource('posts',PostController::class);
+Route::get('/books', [BookController::class, 'index']);
