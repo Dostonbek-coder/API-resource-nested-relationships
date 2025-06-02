@@ -13,5 +13,6 @@ class BookController extends Controller
     {
         $books = Book::with('author')->paginate(10);
         return BookResource::collection($books);
+        
     }
 }
